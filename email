@@ -1,0 +1,11 @@
+function getFirstEmailInputValue() {
+  var inputs = document.querySelectorAll('input[type="email"], input[name="email"]');
+  
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].value.trim() !== '') {
+      return inputs[i].value.trim();
+    }
+  }
+  
+  return '';
+}
