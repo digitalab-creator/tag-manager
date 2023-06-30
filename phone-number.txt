@@ -1,0 +1,22 @@
+function getFirstPhoneNumberValue() {
+  var inputs = document.querySelectorAll('input[type="tel"], input[name="phone"]');
+
+  for (var i = 0; i < inputs.length; i++) {
+    var phoneNumber = inputs[i].value.trim();
+
+    if (phoneNumber !== '') {
+      // Remove non-digit characters
+      phoneNumber = phoneNumber.replace(/\D/g, '');
+
+      // Check if the phone number starts with a plus sign
+      if (!phoneNumber.startsWith('+')) {
+        // Replace the first digit with +972
+        phoneNumber = phoneNumber.replace(/^\d/, '+972');
+      }
+
+      return phoneNumber;
+    }
+  }
+
+  return '';
+}
