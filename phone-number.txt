@@ -1,5 +1,5 @@
 function getFirstPhoneNumberValue() {
-  var inputs = document.querySelectorAll('input[type="tel"], input[name="phone"]');
+  var inputs = document.querySelectorAll('input[type="tel"], input[name="phone"], #form-field-Phone');
 
   for (var i = 0; i < inputs.length; i++) {
     var phoneNumber = inputs[i].value.trim();
